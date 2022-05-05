@@ -43,19 +43,22 @@ export default {
   },
   methods: {
     CallApi() {
-      axios
-        .get(this.API_link)
-        .then((response) => {
-          //console.log(response);
-          this.cards = response.data.response; //Array dischi
-          //console.log(response.data.response);
-          this.loading = false;
-        })
-        .catch((error) => {
-          console.error();
-          error;
-          this.error = `Sorry There is a problem! ${error}`;
-        });
+        setTimeout(() => {
+            axios
+              .get(this.API_link)
+              .then((response) => {
+                //console.log(response);
+                this.cards = response.data.response; //Array dischi
+                //console.log(response.data.response);
+                this.loading = false
+              })
+              .catch((error) => {
+                console.error();
+                error;
+                this.error = `Sorry There is a problem! ${error}`;
+              });
+            
+        }, 2000);
     },
   },
   mounted() {
@@ -70,7 +73,7 @@ export default {
   height: calc(100vh - 100px);
   background-color: $Bg-Primary;
   .container {
-      height: 100%;
+    height: 100%;
     .row {
       height: 100%;
       align-items: center;
