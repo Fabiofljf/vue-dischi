@@ -1,6 +1,6 @@
 <template>
-  <div class="col">
-      <img :src="poster" alt="title">
+  <div class="card shadow">
+      <img :src="img" alt="title">
       <h5>{{title}}</h5>
       <h6>{{author}}</h6>
       <h6>{{year}}</h6>
@@ -12,7 +12,7 @@
 export default {
   name: "DiskCard",
   props:{
-      poster: String,
+      img: String,
       title: String,
       author: String,
       year: String
@@ -22,10 +22,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-.col{
+.card{
     text-align: center;
+    background-color: $Bg-Primary !important;
     h5{
         color: $C-ligth;
     }
 }
+@import '@/assets/scss/style.scss'
 </style>

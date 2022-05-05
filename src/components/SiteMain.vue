@@ -38,7 +38,7 @@ export default {
       API_link: "https://flynn.boolean.careers/exercises/api/array/music",
       cards: null,
       loading: true,
-      error: null
+      error: null,
     };
   },
   methods: {
@@ -69,5 +69,15 @@ export default {
 #downWindows {
   height: calc(100vh - 100px);
   background-color: $Bg-Primary;
+  .container {
+      height: 100%;
+    .row {
+      height: 100%;
+      align-items: center;
+      .col {
+        background-color: $Bg-Primary;
+      }
+    }
+  }
 }
 </style>
