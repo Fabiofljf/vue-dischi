@@ -1,36 +1,21 @@
 <template>
-  <div class="card">
-      <img src="" alt="">
-      <h2></h2>
-      <h3></h3>
-      <h4></h4>
+  <div class="col">
+      <img :src="poster" alt="title">
+      <h2>{{title}}</h2>
+      <h3>{{author}}</h3>
+      <h4>{{year}}</h4>
   </div>
 </template>
 
 <script>
-import axios from "axios";
 
 export default {
   name: "DiskCard",
-  components: {},
-  data() {
-    return {
-      API_link: "https://flynn.boolean.careers/exercises/api/array/music",
-      cards: null,
-    };
-  },
-  methods: {
-      CallApi(){
-          axios
-          .get(this.API_link)
-          .then((response)=>{
-              console.log(response);
-              this.cards = response.data //Array dischi          
-          })
-      }
-  },
-  mounted(){
-      this.CallApi()
+  props:{
+      poster: String,
+      title: String,
+      author: String,
+      year: String
   }
 };
 </script>
