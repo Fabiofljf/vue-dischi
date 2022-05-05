@@ -38,6 +38,7 @@ export default {
       API_link: "https://flynn.boolean.careers/exercises/api/array/music",
       cards: null,
       loading: true,
+      error: null
     };
   },
   methods: {
