@@ -1,9 +1,9 @@
 <template>
   <div class="col">
       <img :src="poster" alt="title">
-      <h2>{{title}}</h2>
-      <h3>{{author}}</h3>
-      <h4>{{year}}</h4>
+      <h5>{{title}}</h5>
+      <h6>{{author}}</h6>
+      <h6>{{year}}</h6>
   </div>
 </template>
 
@@ -22,4 +22,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+.col{
+    text-align: center;
+    h5{
+        color: $C-ligth;
+    }
+}
 </style>
