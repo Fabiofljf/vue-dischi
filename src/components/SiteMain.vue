@@ -16,10 +16,11 @@
     </div>
     <!-- /downWindows -->
     <div
-      class="d-flex min-vh-100 align-items-center justify-content-center"
+      class="d-flex flex-column min-vh-100 align-items-center justify-content-center"
       v-else
     >
       <h1>loading ...</h1>
+      <h1>ho dovuto impostare un setTimeout per questo. Fabio Pacifici passa a mac</h1>
     </div>
   </div>
 </template>
@@ -58,7 +59,7 @@ export default {
                 this.error = `Sorry There is a problem! ${error}`;
               });
             
-        }, 2000);
+        }, 3000);
     },
   },
   mounted() {
