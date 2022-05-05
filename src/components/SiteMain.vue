@@ -3,7 +3,7 @@
     <div id="downWindows" v-if="!loading">
       <div class="container">
         <div class="row row-cols-5">
-          <div class="col" v-for="(card, index) in cards" :key="index">
+          <div class="col g-3" v-for="(card, index) in cards" :key="index">
             <DiskCard
               :img="card.poster"
               :title="card.title"
