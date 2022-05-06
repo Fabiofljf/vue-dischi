@@ -1,5 +1,5 @@
 <template>
-    <form class="d-flex" @submit.prevent="$emit('formSubmit')">
+    <form class="d-flex" @submit.prevent="$emit('eventoPersonalizzato')">
             <input
               class="form-control me-2"
               type="search"
@@ -7,7 +7,7 @@
               aria-label="Search"
               :value="searchDisk"
               @input="$emit('input', $event.target.value)"
-              @keyup="$emit('formSubmit', searchDisk)"
+              @keyup="$emit('eventoPersonalizzato', searchDisk)"
             />
             <button class="btn btn-outline-success" type="submit">
               Search

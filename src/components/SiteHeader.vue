@@ -7,7 +7,7 @@
         </div>
         <!-- /.col -->
         <div class="col d-flex justify-content-end">
-          <SearchBox v-model="searchDisk" @formSubmit="search"></SearchBox>
+          <SearchBox v-model="searchDisk" @eventoPersonalizzato="search" />
         </div>
         <!-- /.col -->
       </div>
