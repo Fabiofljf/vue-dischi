@@ -8,6 +8,7 @@
         <!-- /.col -->
         <div class="col d-flex justify-content-end">
           <SearchBox v-model="searchDisk" @eventoPersonalizzato="search" />
+<!-- direttiva v-model="" bindata alla proprietá searchDisk poi definita nella funzione data del SiteHeader component -->
         </div>
         <!-- /.col -->
       </div>
@@ -31,8 +32,7 @@ export default {
   },
   methods: {
     search(){
-      //console.log('cerca');
-      //console.log(this.searchDisk);
+      console.log(this.searchDisk);
       state.searchDisk = this.searchDisk;
       //console.log(state);
     }

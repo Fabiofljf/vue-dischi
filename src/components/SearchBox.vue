@@ -1,5 +1,6 @@
 <template>
-    <form class="d-flex" @submit.prevent="$emit('eventoPersonalizzato')">
+<!-- Quando questo evento viene emesso, insieme all'evento possiamo passare anche un valore come secondo parametro della funzione $emit -->
+    <form class="d-flex" @submit.prevent="$emit('eventoPersonalizzato')"> 
             <input
               class="form-control me-2"
               type="search"
@@ -20,7 +21,7 @@
 export default({
     name: 'SearchBox',
     props: {
-        searchDisk: String
+        searchDisk: String // - Per poter usare il v-model direttamente sul componente SearchBox quando poi verrá usato
     }
 })
 </script>
