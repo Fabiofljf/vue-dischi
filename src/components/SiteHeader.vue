@@ -5,14 +5,38 @@
         <div class="col">
           <img src="@/assets/img/spotify-brands.svg" alt="logo spotify" />
         </div>
+        <!-- /.col -->
+        <div class="col d-flex justify-content-end">
+          <SearchBox v-model="searchDisk" @formSubmit="search"></SearchBox>
+        </div>
+        <!-- /.col -->
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import SearchBox from '@/components/SearchBox.vue'
+import state from '@/state.js'
+
 export default {
-  name: "HelloWorld",
+  name: "SiteHeader",
+  components:{
+    SearchBox
+  },
+  data(){
+    return {
+      searchDisk: '',
+    }
+  },
+  methods: {
+    search(){
+      //console.log('cerca');
+      //console.log(this.searchDisk);
+      state.searchDisk = this.searchDisk;
+      //console.log(state);
+    }
+  }
 };
 </script>
 
@@ -22,7 +46,6 @@ export default {
   height: 100px;
   background-color: $Bg-Secondary;
   .container {
-    margin-left: 100px;
     .row {
       height: 100px;
       align-items: center;
